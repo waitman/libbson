@@ -30,7 +30,6 @@ install:
 	$(INSTALL) -m 644 ./bson/bson-thread.h $(PREFIX)/include/bson
 	$(INSTALL) -m 644 ./bson/bson-types.h $(PREFIX)/include/bson
 	$(INSTALL) -m 644 ./bson/bson-utf8.h $(PREFIX)/include/bson
-	$(INSTALL) -m 644 ./bson/bson-version.h.in $(PREFIX)/include/bson
 	$(INSTALL) -m 644 ./bson/bson-writer.h $(PREFIX)/include/bson
 	$(INSTALL) -m 644 ./bson/bson.h $(PREFIX)/include/bson
 	$(INSTALL) -m 644 ./bson/bson-stdint.h $(PREFIX)/include/bson
