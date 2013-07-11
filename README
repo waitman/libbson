@@ -19,6 +19,8 @@ https://github.com/mongodb/libbson
 
 modified by Waitman Gobble <waitman@waitman.net> 2013-07-10
 
+builds with clang or gcc
+
 If you are using this modified version, skip the build instructions
 but make sure to skip down to the important documentation which 
 follows.
