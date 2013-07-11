@@ -24,6 +24,10 @@ builds with clang or gcc
 If you are using this modified version, skip the build instructions
 but make sure to skip down to the important documentation which 
 follows.
+
+TESTS AND EXAMPLES have been removed from this repository.
+See https://github.com/waitman/libbson-tests
+
 **********************************************************************
 
 # Building
