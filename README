@@ -5,6 +5,24 @@ and iterating BSON documents.  It is a useful base for those wanting to write
 high-performance C extensions to higher level languages such as python, ruby,
 or perl.
 
+**********************************************************************
+NOTE: this is a modified version, for FreeBSD ports. 
+
+Development version, use at own risk.
+
+The autotools build has been cut and replaced with a BSD-style Makefile.
+The sources have not been altered, however at the moment the python library
+extension has been omitted from this build. To use the original build 
+system with the python extensions, please visit the GIT repository page
+at the following URL:
+https://github.com/mongodb/libbson
+
+modified by Waitman Gobble <waitman@waitman.net> 2013-07-10
+
+If you are using this modified version, skip the build instructions
+but make sure to skip down to the important documentation which 
+follows.
+**********************************************************************
 
 # Building
 
