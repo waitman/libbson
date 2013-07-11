@@ -2,13 +2,14 @@ CC?=		clang
 AR?=		ar
 INSTALL?=	install
 PREFIX?=	/usr/local
+CFLAGS?=	-O2
 
 all: libbson
 
 libbson:
-	$(CC) -c -fPIC -I./bson -DBSON_COMPILATION -DBSON_BYTE_ORDER=1234 -g -O2 -Wall -Werror ./bson/bson.c ./bson/bson-context.c ./bson/bson-clock.c ./bson/bson-error.c ./bson/bson-iter.c ./bson/bson-keys.c ./bson/bson-md5.c ./bson/bson-memory.c ./bson/bson-oid.c ./bson/bson-reader.c ./bson/bson-string.c ./bson/bson-utf8.c ./bson/bson-writer.c
-	$(AR) rvs libbson.a bson-clock.o bson-context.o bson-error.o bson-iter.o bson-keys.o bson-md5.o bson-memory.o bson-oid.o bson-reader.o bson-string.o bson-utf8.o bson-writer.o
-	$(CC) -shared -fPIC -o libbson.so bson-clock.o bson-context.o bson-error.o bson-iter.o bson-keys.o bson-md5.o bson-memory.o bson-oid.o bson-reader.o bson-string.o bson-utf8.o bson-writer.o
+	$(CC) -c -fPIC -I./bson -DBSON_COMPILATION -DBSON_BYTE_ORDER=1234 $(CFLAGS) -g -Wall -Werror ./bson/bson.c ./bson/bson-context.c ./bson/bson-clock.c ./bson/bson-error.c ./bson/bson-iter.c ./bson/bson-keys.c ./bson/bson-md5.c ./bson/bson-memory.c ./bson/bson-oid.c ./bson/bson-reader.c ./bson/bson-string.c ./bson/bson-utf8.c ./bson/bson-writer.c
+	$(AR) rvs libbson.a bson.o bson-clock.o bson-context.o bson-error.o bson-iter.o bson-keys.o bson-md5.o bson-memory.o bson-oid.o bson-reader.o bson-string.o bson-utf8.o bson-writer.o
+	$(CC) -shared -fPIC -o libbson.so bson.o bson-clock.o bson-context.o bson-error.o bson-iter.o bson-keys.o bson-md5.o bson-memory.o bson-oid.o bson-reader.o bson-string.o bson-utf8.o bson-writer.o
 
 install:
 	mkdir $(PREFIX)/include/bson
